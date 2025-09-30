@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abell | Quiz Complete</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    body{margin:0;padding:0;background:#F6F7F9;color:#1B1F23;font-family:Segoe UI,Roboto,Arial,Helvetica,sans-serif;line-height:1.55}
+    .wrap{max-width:760px;margin:40px auto;background:#fff;border:1px solid #E6E8ED;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.06);padding:18px}
+    .muted{color:#6C727F}
+    code{background:#F3F4F6;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Thanks — Training Complete ✅</h1>
+    <p class="muted">We recorded your completion details below.</p>
+    <div id="details" style="margin-top:10px"></div>
+  </div>
+  <script>
+    (function(){
+      var qs=new URLSearchParams(location.search);
+      var out='<ul>';
+      qs.forEach(function(v,k){ out+='<li><strong>'+k+':</strong> '+String(v).replace(/</g,'&lt;')+'</li>'; });
+      out+='</ul>';
+      document.getElementById('details').innerHTML = out;
+    })();
+  </script>
+</body>
+</html>
