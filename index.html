@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abell | Starbucks Training Quiz</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    body{margin:0;padding:0;background:#F6F7F9;color:#1B1F23;font-family:Segoe UI,Roboto,Arial,Helvetica,sans-serif;line-height:1.55}
+    .wrap{max-width:760px;margin:0 auto 14px;background:#fff;border:1px solid #E6E8ED;border-radius:14px;
+          box-shadow:0 8px 24px rgba(0,0,0,.06);padding:18px}
+    .pill{display:inline-block;background:#FFE6E9;color:#D6001C;border:1px solid #F6B4BD;border-radius:999px;
+          padding:6px 10px;font-size:12px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;margin-bottom:0}
+    h1{margin:10px 0 6px;font-size:24px}
+    h2{margin:0 0 10px;font-size:18px}
+    label{font-size:14px}
+    input[type="text"],input[type="email"]{width:100%;padding:12px;border:1px solid #D9DEE5;border-radius:10px;font-size:14px;box-sizing:border-box}
+    .btn{display:inline-block;background:#D6001C;color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn.secondary{background:#0B5FFF}
+    fieldset{margin:12px 0;border:0;padding:0}
+    legend{font-weight:600;margin-bottom:6px}
+    .muted{color:#6C727F;font-size:13px}
+    .note{margin-top:10px;padding:12px;border:1px solid #E6E8ED;border-radius:10px;background:#F8FAFF;font-size:14px}
+    .ok{background:#EAF7EE;border-radius:8px}
+    .bad{background:#FFF1F1;border-radius:8px}
+    .bar{height:1px;background:#E6E8ED;margin:16px 0}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:560px){.row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <img alt="Abell" src="https://emailer.emfluence.com/clients/7855/uploadedfiles/Logo/Abell_Logo.png" style="height:42px;vertical-align:middle" />
+      <div class="pill">Starbucks Chain Account</div>
+    </div>
+    <h1>Technician Training — Quiz</h1>
+    <p class="muted">Score <strong>100%</strong> to enable Submit (you can change this to 90% in the code). Your name, branch, attempts, and score will be recorded via the redirect.</p>
+  </div>
+
+  <!-- Technician Details -->
+  <div class="wrap">
+    <h2>Technician Details</h2>
+    <div class="row">
+      <div>
+        <label for="first_name">First Name *</label>
+        <input id="first_name" name="first_name" type="text" required readonly />
+      </div>
+      <div>
+        <label for="last_name">Last Name *</label>
+        <input id="last_name" name="last_name" type="text" required readonly />
+      </div>
+      <div>
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required readonly />
+      </div>
+      <div>
+        <label for="branch_name">Branch Name *</label>
+        <input id="branch_name" name="branch_name" type="text" required readonly />
+      </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <div>
+        <label for="branch_code">Branch Code</label>
+        <input id="branch_code" name="branch_code" type="text" readonly />
+      </div>
+      <div>
+        <label for="attempts_disp">Attempts (auto)</label>
+        <input id="attempts_disp" type="text" readonly />
+      </div>
+    </div>
+    <p class="muted" id="noParamsMsg" style="display:none;margin-top:8px">
+      Tip: open this from your personal email link so details prefill automatically.
+    </p>
+  </div>
+
+  <!-- Quiz -->
+  <div class="wrap" id="quizCard">
+    <h2>Quiz (10 Questions)</h2>
+
+    <!-- Q1 -->
+    <fieldset><legend>1) How many insect monitors are mandatory at all locations?</legend>
+      <label><input type="radio" name="q1" value="0"> 1–2</label><br>
+      <label><input type="radio" name="q1" value="0"> 3–5</label><br>
+      <label><input type="radio" name="q1" value="1"> 5–10</label><br>
+      <label><input type="radio" name="q1" value="0"> Not required</label>
+    </fieldset>
+
+    <!-- Q2 -->
+    <fieldset><legend>2) How many mechanical traps are mandatory at all locations?</legend>
+      <label><input type="radio" name="q2" value="0"> 1</label><br>
+      <label><input type="radio" name="q2" value="1"> 2</label><br>
+      <label><input type="radio" name="q2" value="0"> 3</label><br>
+      <label><input type="radio" name="q2" value="0"> None</label>
+    </fieldset>
+
+    <!-- Q3 -->
+    <fieldset><legend>3) Evo Express station is mandatory:</legend>
+      <label><input type="radio" name="q3" value="1"> At advanced stores only</label><br>
+      <label><input type="radio" name="q3" value="0"> At all stores</label><br>
+      <label><input type="radio" name="q3" value="0"> Only if requested</label><br>
+      <label><input type="radio" name="q3" value="0"> Never</label>
+    </fieldset>
+
+    <!-- Q4 -->
+    <fieldset><legend>4) Devices must be placed:</legend>
+      <label><input type="radio" name="q4" value="1"> Out of customer view and not on food surfaces</label><br>
+      <label><input type="radio" name="q4" value="0"> Anywhere, if labeled</label><br>
+      <label><input type="radio" name="q4" value="0"> On prep tables</label><br>
+      <label><input type="radio" name="q4" value="0"> Near the pastry case</label>
+    </fieldset>
+
+    <!-- Q5 -->
+    <fieldset><legend>5) Fly lights may be installed:</legend>
+      <label><input type="radio" name="q5" value="0"> In the pastry case</label><br>
+      <label><input type="radio" name="q5" value="1"> Back of House with FSM approval, not near ice machine or above sinks</label><br>
+      <label><input type="radio" name="q5" value="0"> Anywhere with manager approval</label><br>
+      <label><input type="radio" name="q5" value="0"> Front of House only</label>
+    </fieldset>
+
+    <!-- Q6 -->
+    <fieldset><legend>6) Snap traps may be used when:</legend>
+      <label><input type="radio" name="q6" value="1"> Rodent activity is present; never where partners may encounter them</label><br>
+      <label><input type="radio" name="q6" value="0"> Requested by partner</label><br>
+      <label><input type="radio" name="q6" value="0"> Monthly by default</label><br>
+      <label><input type="radio" name="q6" value="0"> Only outside</label>
+    </fieldset>
+
+    <!-- Q7 -->
+    <fieldset><legend>7) Drain maintenance schedule is:</legend>
+      <label><input type="radio" name="q7" value="1"> Monthly foaming; annual scrubbing in April/May</label><br>
+      <label><input type="radio" name="q7" value="0"> Quarterly foaming</label><br>
+      <label><input type="radio" name="q7" value="0"> Annual foaming only</label><br>
+      <label><input type="radio" name="q7" value="0"> As requested only</label>
+    </fieldset>
+
+    <!-- Q8 -->
+    <fieldset><legend>8) Summer/Fall 2025 stinging insect requests are billed at:</legend>
+      <label><input type="radio" name="q8" value="0"> $50</label><br>
+      <label><input type="radio" name="q8" value="0"> $100</label><br>
+      <label><input type="radio" name="q8" value="1"> $125</label><br>
+      <label><input type="radio" name="q8" value="0"> No charge</label>
+    </fieldset>
+
+    <!-- Q9 -->
+    <fieldset><legend>9) A rodent sighting or capture triggers:</legend>
+      <label><input type="radio" name="q9" value="1"> A 24-hour follow-up; continue until 0 captures</label><br>
+      <label><input type="radio" name="q9" value="0"> Note only, no follow-up</label><br>
+      <label><input type="radio" name="q9" value="0"> Weekly follow-up</label><br>
+      <label><input type="radio" name="q9" value="0"> 72-hour follow-up</label>
+    </fieldset>
+
+    <!-- Q10 -->
+    <fieldset><legend>10) If cockroaches are found, schedule:</legend>
+      <label><input type="radio" name="q10" value="1"> 1 follow-up after 7 days (weekdays no-charge; weekends $125)</label><br>
+      <label><input type="radio" name="q10" value="0"> Same-day revisit only</label><br>
+      <label><input type="radio" name="q10" value="0"> 30-day revisit</label><br>
+      <label><input type="radio" name="q10" value="0"> No follow-up unless requested</label>
+    </fieldset>
+
+    <label style="display:block;margin:10px 0 6px">
+      <input type="checkbox" id="attest_complete" value="yes" required> I attest that I completed this training and quiz.
+    </label>
+
+    <div class="bar"></div>
+    <button class="btn secondary" type="button" id="checkBtn">Check Answers</button>
+    <button class="btn" type="button" id="submitBtn" disabled>Submit Quiz</button>
+    <div id="resultBox" class="note" style="display:none;margin-top:10px"></div>
+    <p class="muted" style="margin-top:8px">You can re-check as many times as needed. Submit enables only when you reach the required score.</p>
+  </div>
+
+  <script>
+    (function(){
+      // ====== CONFIG ======
+      var PASS_THRESHOLD = 100; // set to 90 for 90% pass
+      var TY_URL = ''; // PROD: paste your Emfluence Thank-You URL (e.g., https://hostedlandingpages.net/XXXX/?status=pass ...)
+                       // If left blank, we will redirect to ./thanks.html for local testing.
+
+      // ====== PARAMS & PREFILL ======
+      var qs = new URLSearchParams(location.search);
+      function setVal(id, v){ var el = document.getElementById(id); if(el) el.value = v || ''; }
+
+      var email  = qs.get('email') || '';
+      var fn     = qs.get('fn') || qs.get('first_name') || '';
+      var ln     = qs.get('ln') || qs.get('last_name') || '';
+      var branch = qs.get('branch') || qs.get('branch_name') || '';
+      var bcode  = qs.get('branch_code') || '';
+
+      setVal('email', email);
+      setVal('first_name', fn);
+      setVal('last_name', ln);
+      setVal('branch_name', branch);
+      setVal('branch_code', bcode);
+
+      var noParams = !(email || fn || ln || branch || bcode);
+      if(noParams){ var msg=document.getElementById('noParamsMsg'); if(msg) msg.style.display='block'; }
+
+      // Attempts tracking (per browser tab)
+      var attempts = Number(sessionStorage.getItem('abell_quiz_attempts')||0);
+      function bumpAttempts(){ attempts = attempts + 1; sessionStorage.setItem('abell_quiz_attempts', String(attempts)); }
+      function showAttempts(){ var a=document.getElementById('attempts_disp'); if(a) a.value = String(attempts); }
+      showAttempts();
+
+      // ====== QUIZ EVAL ======
+      function groups(){ var g={}; document.querySelectorAll('input[type="radio"][name^="q"]').forEach(function(r){(g[r.name]||(g[r.name]=[])).push(r)}); return g; }
+
+      function evaluate(){
+        var g = groups(), total = Object.keys(g).length, answered=0, correct=0;
+
+        // reset styles
+        document.querySelectorAll('fieldset').forEach(function(fs){ fs.style.border='0'; });
+        document.querySelectorAll('fieldset label').forEach(function(l){ l.classList.remove('ok','bad'); });
+
+        Object.keys(g).forEach(function(name){
+          var radios = g[name], fs = radios[0].closest('fieldset');
+          var chosen = radios.find(function(r){ return r.checked; });
+          if(!chosen){ if(fs){ fs.style.border='1px solid #F3C1C6'; } return; }
+          answered++;
+          if(chosen.value === '1'){ correct++; chosen.parentElement.classList.add('ok'); }
+          else{ chosen.parentElement.classList.add('bad'); if(fs){ fs.style.border='1px solid #F3C1C6'; } }
+        });
+
+        var percent = total ? Math.round((correct/total)*100) : 0;
+        return {total:total, answered:answered, correct:correct, percent:percent};
+      }
+
+      function showResult(res){
+        var box = document.getElementById('resultBox');
+        var submit = document.getElementById('submitBtn');
+        if(!box || !submit) return;
+
+        box.style.display = 'block';
+        var allAnswered = (res.answered === res.total);
+        var pass = (res.percent >= PASS_THRESHOLD);
+
+        box.style.borderColor = pass ? '#CDE8D5' : '#F3C1C6';
+        box.style.background  = pass ? '#F2FBF5' : '#FFF7F7';
+        box.style.color       = pass ? '#0F5132' : '#842029';
+
+        var missing = res.total - res.answered;
+        var wrong = res.total - res.correct;
+
+        box.innerHTML =
+          (allAnswered
+            ? ('Score: <strong>'+res.percent+'%</strong> • Correct: '+res.correct+'/'+res.total+' • Wrong: '+wrong)
+            : ('Please answer all questions ('+missing+' missing).')) +
+          (allAnswered
+            ? (pass ? '<div style="margin-top:6px;">✅ You meet the requirement. You can submit now.</div>'
+                    : '<div style="margin-top:6px;">⚠️ Below '+PASS_THRESHOLD+'%. Fix highlighted answers and re-check.</div>')
+            : '');
+
+        submit.disabled = !(allAnswered && pass && document.getElementById('attest_complete').checked);
+      }
+
+      // Wire buttons
+      document.getElementById('checkBtn').addEventListener('click', function(){
+        bumpAttempts();
+        showAttempts();
+        var res = evaluate();
+        showResult(res);
+      });
+
+      document.getElementById('attest_complete').addEventListener('change', function(){
+        var res = evaluate();
+        showResult(res);
+      });
+
+      document.getElementById('submitBtn').addEventListener('click', function(){
+        var res = evaluate();
+        if(res.percent < PASS_THRESHOLD){ alert('Please reach '+PASS_THRESHOLD+'% before submitting.'); return; }
+
+        // Build redirect to Thank-You
+        var ty = TY_URL ? new URL(TY_URL) : new URL('./thanks.html', location.href);
+        ty.searchParams.set('status','pass');
+        ty.searchParams.set('score', String(res.percent));
+        ty.searchParams.set('attempts', String(attempts));
+        if(email)  ty.searchParams.set('email', email);
+        if(fn)     ty.searchParams.set('fn', fn);
+        if(ln)     ty.searchParams.set('ln', ln);
+        if(branch) ty.searchParams.set('branch', branch);
+        if(bcode)  ty.searchParams.set('branch_code', bcode);
+
+        window.location.href = ty.toString();
+      });
+    })();
+  </script>
+</body>
+</html>
